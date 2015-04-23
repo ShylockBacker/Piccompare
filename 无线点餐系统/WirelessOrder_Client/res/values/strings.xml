@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <string name="hello">Hello World, WirelessOrder_ClientActivity!</string>
-    <string name="app_name">订餐系统</string>
-<string name="zhanghao">账号</string>
-<string name="mima">密码</string>
-</resources>
