@@ -9,10 +9,10 @@
     tools:context="com.example.reader.ReaderActivity" >
             
     <ImageView
+        android:id="@+id/image_view"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:id="@+id/image_view"
-        android:scaleType="fitCenter"/>
+        android:scaleType="fitCenter" />
 
     <Button
         android:id="@+id/button1"
@@ -112,12 +112,24 @@
         android:layout_below="@+id/white"
         android:text="@string/yellow" />
 
-    <Spinner
-        android:id="@+id/spinner1"
-		android:layout_width = "160px" 
-		android:layout_height = "40px"
-		android:prompt = "@string/spin_prompt"          
+    <Button
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
+        android:width="100dp"
+        android:layout_height="wrap_content"
+        android:height="50dp"
+        android:layout_alignRight="@+id/image_view"
         android:layout_alignTop="@+id/image_view"
-        android:layout_toRightOf="@+id/image_view" />
+        android:text="Select" />
+
+    <Button
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/darkblue"
+        android:layout_alignParentRight="true"
+        android:height="50dp"
+        android:text="Search"
+        android:width="100dp" />
 
 </RelativeLayout>

@@ -1,11 +1,10 @@
 package com.example.reader;
 
 import android.app.Activity;
-import android.content.res.Resources;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
@@ -45,6 +44,8 @@ public class ReaderActivity extends Activity {
         setRedButton();
         setWhiteButton();
         setYellowButton();
+        setSelectButton();
+        setSearchButton();
 
 	}
 
@@ -244,6 +245,34 @@ public class ReaderActivity extends Activity {
             SettingButton.setOnClickListener(new View.OnClickListener() {                
                 public void onClick(View v) {
                 	initlayout();
+                }
+            });            
+        }
+	}
+	
+	private void setSelectButton() {
+		TextView SelectButton = (TextView) findViewById(R.id.select);
+		SelectButton.setText(R.string.action_select);
+        if (SelectButton != null) {
+        	SelectButton.setOnClickListener(new View.OnClickListener() {                
+                public void onClick(View v) {
+                  Intent intent = new Intent(ReaderActivity.this,SelectActivity.class);
+                  startActivity(intent);
+                  ReaderActivity.this.finish();
+                }
+            });            
+        }
+	}
+	
+	private void setSearchButton() {
+		TextView SearchButton = (TextView) findViewById(R.id.search);
+		SearchButton.setText(R.string.action_search);
+        if (SearchButton != null) {
+        	SearchButton.setOnClickListener(new View.OnClickListener() {                
+                public void onClick(View v) {
+                  Intent intent = new Intent(ReaderActivity.this,SearchActivity.class);
+                  startActivity(intent);
+                  ReaderActivity.this.finish();
                 }
             });            
         }
